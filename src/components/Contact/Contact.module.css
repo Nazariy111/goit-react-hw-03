@@ -1,0 +1,43 @@
+.myIcon {
+    fill: black;
+}
+
+.contactInfo {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding: 0;
+    gap: 10px;
+   
+}
+
+ul {
+    list-style: none;
+}
+
+.contactItem {
+    border: 1px solid black;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 0;
+    align-items: center;
+    width: 270px;
+}
+
+.contactInfo li p {
+    color: black;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    gap: 5px;
+}
+
+.contactButton {
+    display: flex;
+    padding: 5px;
+    border: 1px solid rgb(116, 114, 114);
+    border-radius: 5%;
+}
