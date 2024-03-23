@@ -21,10 +21,10 @@ function App() {
   const [contacts, setContacts] = useState(() => {
 
     const stringifiedContacts = localStorage.getItem('contacts');
+    
+    if(!stringifiedContacts || JSON.parse(stringifiedContacts).length === 0) return contactsStart;
+
     const parsedContacts = JSON.parse(stringifiedContacts);
-
-    if (parsedContacts.length === 0) return contactsStart;
-
     return parsedContacts;
   });
 
