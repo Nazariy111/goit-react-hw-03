@@ -15,20 +15,23 @@ const contactsStart = [
   { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },
 ];
 
+
+
 function App() {
   const [contacts, setContacts] = useState(() => {
-    const stringifiedContacts = localStorage.getItem('contacts');
-    if (!stringifiedContacts) return contactsStart;
 
+    const stringifiedContacts = localStorage.getItem('contacts');
     const parsedContacts = JSON.parse(stringifiedContacts);
+
+    if (parsedContacts.length === 0) return contactsStart;
+
     return parsedContacts;
   });
+
 
   useEffect(() => { 
     localStorage.setItem("contacts", JSON.stringify(contacts))
   }, [contacts]);
-
-
 
   const [filter, setFilter] = useState('');
 

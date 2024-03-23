@@ -6,6 +6,7 @@ import css from './ContactForm.module.css'
 
 
 const INITIAL_VALUES = { id: "", name: "", number: "" };
+
 const contactSchema = Yup.object().shape({
     name: Yup
         .string()
@@ -35,14 +36,14 @@ const ContactForm = ({ onAddContact }) => {
             onSubmit={handleSubmit}
             validationSchema={contactSchema}>
             <Form className={css.formSection}>
-                <label htmlFor={nameFieldId}>Name</label>
-                <Field type="text" name="name" id={nameFieldId} />
-                <ErrorMessage component="p" name='name'/>
+                <label className={css.formLabel} htmlFor={nameFieldId}>Name</label>
+                <Field className={css.inputField} type="text" name="name" id={nameFieldId} placeholder=""/>
+                <ErrorMessage className={css.errorText} component="p" name='name'/>
 
-                <label htmlFor={numberFieldId}>Number</label>
-                <Field type="tel" name="number" id={numberFieldId} />
-                <ErrorMessage component="p" name='number'/>
-                <button type="submit">Add contact</button>
+                <label className={css.formLabel} htmlFor={numberFieldId}>Number</label>
+                <Field className={css.inputField} type="tel" name="number" id={numberFieldId} placeholder=""/>
+                <ErrorMessage className={css.errorText} component="p" name='number'/>
+                <button className={css.formButton} type="submit">Add contact</button>
             </Form>
         </Formik>
     )

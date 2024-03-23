@@ -2,4 +2,47 @@
     display: flex;
     flex-direction: column;
     margin-right: auto;
+    width: 300px;
+    border: 2px solid rgb(121, 120, 120);
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.formLabel {
+    color: black;
+}
+
+.inputField {
+    border: 1px solid rgb(117, 116, 116);
+    border-radius: 3px;
+}
+
+.inputField:hover,
+.inputField:focus,
+.inputField:active,
+.inputField:active::placeholder {
+    border-color: rgb(138, 152, 232);
+}
+
+.errorText {
+    color: red;
+    margin: 0;
+    font-size: 12px;
+}
+
+.formButton {
+    padding: 5px;
+    margin: 10px auto 0 auto;
+    border: 1px solid grey;
+    max-width:max-content;
+    border-radius: 5px;
+    
+
+}
+
+.formButton:hover,
+.formButton:focus {
+    border-color: black;
+    background-color: rgb(238, 233, 233);
 }

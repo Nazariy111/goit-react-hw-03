@@ -1,10 +1,11 @@
 import React from 'react'
+import css from './SearchBox.module.css'
 
 const SearchBox = ({filter, onChangeFilter}) => {
     return (
-        <div>
-            <h2>Find contacts by name</h2>
-            <input type="text" value={filter} onChange={onChangeFilter}/>
+        <div className={css.searchBox} >
+            <p className={css.searchTitle}>Find contacts by name</p>
+            <input className={css.searchInput} type="text" value={filter} onChange={onChangeFilter}/>
         </div> 
     )
 }

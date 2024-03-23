@@ -41,3 +41,8 @@ ul {
     border: 1px solid rgb(116, 114, 114);
     border-radius: 5%;
 }
+
+.contactButton:hover {
+    border-color: black;
+    background-color: rgb(238, 233, 233);
+}
